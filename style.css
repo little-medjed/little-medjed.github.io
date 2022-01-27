@@ -34,3 +34,10 @@ article > img{
   margin: 6px;
   width: 200px;
 }
+
+footer{
+  background-color: white;
+  text-align: center;
+  border-radius: 16px;
+  margin: 20px;
+}

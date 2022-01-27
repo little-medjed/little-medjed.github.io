@@ -17,6 +17,10 @@ header > nav > a{
   font-weight:bold;
 }
 
+a:hover{
+  color: purple;
+}
+
 article{
   background-color: white;
   border-radius: 16px;
@@ -29,10 +33,14 @@ article > header > h2{
   margin-bottom: 2px;
 }
 
-article > img{
+img{
   border-radius: 26px;
   margin: 6px;
   width: 200px;
+}
+
+p{
+  align-content: center;
 }
 
 footer{

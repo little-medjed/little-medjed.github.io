@@ -1,0 +1,36 @@
+body{
+  background-color: black;
+  font-family: monospace;
+}
+
+header > nav{
+  background-color: white;
+  text-align: center;
+  border-radius: 16px;
+  margin: 20px;
+}
+
+header > nav > a{
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+article{
+  background-color: white;
+  border-radius: 16px;
+  text-align: center;
+  margin: 20px;
+}
+
+article > header > h2{
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+
+article > img{
+  border-radius: 26px;
+  margin: 6px;
+  width: 200px;
+}

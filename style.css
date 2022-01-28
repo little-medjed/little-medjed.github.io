@@ -30,6 +30,8 @@ article{
   text-align: center;
   margin-left: 13%;
   margin-right: 13%;
+  padding-top: 2%;
+  padding-bottom: 2%;
 }
 
 article > header > h2{

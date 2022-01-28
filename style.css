@@ -1,13 +1,16 @@
 body{
   background-color: black;
   font-family: monospace;
+  font-size: 14px;
 }
 
 header > nav{
   background-color: white;
   text-align: center;
   border-radius: 16px;
-  margin: 20px;
+  margin-top: 2%;
+  margin-left: 16%;
+  margin-right: 16%
 }
 
 header > nav > a{
@@ -25,7 +28,8 @@ article{
   background-color: white;
   border-radius: 16px;
   text-align: center;
-  margin: 20px;
+  margin-left: 16%;
+  margin-right: 16%
 }
 
 article > header > h2{
@@ -47,5 +51,7 @@ footer{
   background-color: white;
   text-align: center;
   border-radius: 16px;
-  margin: 20px;
+  margin-bottom: 2%;
+  margin-left: 16%;
+  margin-right: 16%
 }

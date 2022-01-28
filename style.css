@@ -8,9 +8,9 @@ header > nav{
   background-color: white;
   text-align: center;
   border-radius: 16px;
-  margin-top: 2%;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-top: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
 }
 
 header > nav > a{
@@ -28,8 +28,8 @@ article{
   background-color: white;
   border-radius: 16px;
   text-align: center;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 13%;
+  margin-right: 13%;
 }
 
 article > header > h2{
@@ -51,7 +51,7 @@ footer{
   background-color: white;
   text-align: center;
   border-radius: 16px;
-  margin-bottom: 2%;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-bottom: 3%;
+  margin-left: 13%;
+  margin-right: 13%;
 }

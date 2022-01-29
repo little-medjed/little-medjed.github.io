@@ -35,13 +35,13 @@ article{
   align-content: center;
 }
 
-article > header > h2{
+article > header > h3{
   margin-top: 0px;
   margin-bottom: 2px;
 }
 
 .calc{
-  background-color: pink;
+  background-color: #ffafcc;
   border: 1px solid;
   border-color: purple;
   border-radius: 16px;
@@ -117,8 +117,8 @@ article > header > h2{
 
 .calc-keys > img{
   grid-column: 4;
-  width: 50px;
-  margin-left: 30%;
+  width: 45px;
+  margin-left: 35%;
 }
 
 footer{

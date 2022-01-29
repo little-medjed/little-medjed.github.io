@@ -32,11 +32,12 @@ article{
   margin-right: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
+  align-content: center;
 }
 
-article > h2{
+article > header > h2{
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .calc{
@@ -44,72 +45,80 @@ article > h2{
   border: 1px solid;
   border-color: purple;
   border-radius: 16px;
-  margin-left: 18%;
-  margin-right: 18%;
+  width: 64%;
+  margin-left: 14%;
+  padding: 4%;
 }
 
-.calc-screen{
-  width: 75%;
-  font-size: 3rem;
+#calc-screen{
+  width: 80%;
+  height: 3rem;
+  overflow: hidden;
+  font-size: 3em;
   color: black;
   text-align: right;
   background-color: transparent;
   border: 1px solid purple;
   border-radius: 16px;
-  padding-right: 20px;
-  margin-top: 5%;
+  margin-left: 8%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-right: 3%;
 }
 
 .calc-keys{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  padding: 5%;
+  grid-gap: 2%;
+  padding: 4%;
 }
 
-button{
+.button{
   height: 3rem;
   font-size: 2em;
   background-color: transparent;
   border-radius: 16px;
   border: 1px solid purple;
-  margin: 4%;
+  cursor: pointer;
 }
 
-button:hover{
-  background-color: purple;
+.button:hover{
+  background-color: #be50cc;
+  color: white;
+  transition: 0.1s ease-in-out;
+}
+
+#equal{
+  grid-row: 4;
+  grid-column: 4;
+  background-color: #ff508f;
   color: white;
 }
 
-.equal{
-  grid-row: 4 / 5;
-  grid-column: 4;
+#equal:hover{
+  background-color: #be50cc;
+  color: white;
+  transition: 0.1s ease-in-out;
 }
 
-.decimal{
+#decimal{
   grid-row-start: 5;
 }
 
-.clear{
+#clear{
   grid-row-start: 3;
   grid-column-start: 4;
 }
 
-.del{
+#del{
   grid-row-start: 2;
   grid-column-start: 4;
 }
 
-.calc-keys > p{
-  font-size: 145%;
-  font-weight: bolder;
-  font-style: italic;
-  margin: 10%;
-}
-
 .calc-keys > img{
+  grid-column: 4;
   width: 50px;
-  margin: 10%;
-  margin-left: 20%;
+  margin-left: 30%;
 }
 
 footer{

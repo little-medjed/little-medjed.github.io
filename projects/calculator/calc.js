@@ -1,4 +1,4 @@
-console.log("丂卂Ҝㄩ尺卂 匚卂ㄥ匚ㄩㄥ卂ㄒㄖ尺");
+//丂卂Ҝㄩ尺卂 匚卂ㄥ匚ㄩㄥ卂ㄒㄖ尺"
 
 function insert(x){
   let num = document.getElementById('calc-screen').innerHTML;

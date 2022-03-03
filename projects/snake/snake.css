@@ -5,31 +5,34 @@ body{
   color: #4f418c;
 }
 
+.main{
+  width: 60%;
+  display: block;
+  position: fixed;
+  margin-left: 20%;
+}
+
 a{
   text-decoration: none;
   color: #dad6d7;
   font-weight: bold;
 }
 
-
-article{
+.screen{
   background-color: #7c7c7e;
   border-radius: 16px;
   box-shadow: 2px 2px #7e777e;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
 
 h1{
-  margin-left: 10%;
   margin-top: 2px;
 }
 .R_a{
+  margin-right: 2%;
   margin-top: 2%;
-  margin-right: 12%;
   float: right;
 }
 
@@ -47,15 +50,14 @@ h1{
   border-radius: 75px;
   color: #dad6d7;
   font-weight: bold;
+  font-size: 1rem;
   text-align: center;
   cursor: pointer;
   height: 5rem;
   width: 5rem;
-
 }
 
 .L{
-  margin-left: 12%;
   margin-top: 2px;
   float: left;
 }
@@ -111,4 +113,62 @@ h1{
   height: 3rem;
   width: 3rem;
   box-shadow: 2px 3px #30272b;
+}
+
+
+
+@media screen and (max-width: 760px) {
+  .main{
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  h1{
+    margin-top: 2px;
+    font-size: 25px;
+  }
+
+  .R_a{
+    margin-right: 3%;
+    margin-top: 2%;
+    float: right;
+  }
+
+  .R_b{
+    margin-right: 8%;
+    margin-top: 10%;
+    float: right;
+  }
+
+  .right_buttons{
+    height: 4rem;
+    width: 4rem;
+  }
+
+  #up{
+    height: 3rem;
+    width: 2rem;
+  }
+
+  #down{
+    height: 3rem;
+    width: 2rem;
+  }
+
+  #left{
+    height: 2rem;
+    width: 3rem;
+  }
+
+  #right{
+    height: 2rem;
+    width: 3rem;
+  }
+
+  #middle{
+    height: 2rem;
+    width: 2rem;
+  }
 }

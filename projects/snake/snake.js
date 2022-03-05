@@ -4,6 +4,10 @@
 //VARIABLES
 const gameCanvas = document.getElementById('gameCanvas');
 const ctx = gameCanvas.getContext("2d"); //ctx == canvas context
+const up = document.querySelector("#up");
+const down = document.querySelector("#down");
+const left = document.querySelector("#left");
+const right = document.querySelector("#right");
 
 const GAME_SPEED = 100;
 const CANVAS_BORDER_COLOR = '#346856';
@@ -126,9 +130,6 @@ function drawSnakePart(snakePart){
 }
 
 
-
-
-
     //CONTROLS
 function changeDirection(event) {
   const LEFT_KEY = 37;
@@ -143,23 +144,63 @@ function changeDirection(event) {
 
   const goingUp = velocity_y === -10;
   const goingDown = velocity_y === 10;
-  const goingRight = velocity_x === 10;
   const goingLeft = velocity_x === -10;
+  const goingRight = velocity_x === 10;
+
+
+  if (keyPressed === UP_KEY && !goingDown) {
+    velocity_x = 0;
+    velocity_y = -10;
+  }
+
+  if (keyPressed === DOWN_KEY && !goingUp) {
+    velocity_x = 0;
+    velocity_y= 10;
+  }
 
   if (keyPressed === LEFT_KEY && !goingRight) {
     velocity_x = -10;
     velocity_y = 0;
   }
-  if (keyPressed === UP_KEY && !goingDown) {
-    velocity_x = 0;
-    velocity_y = -10;
-  }
+
   if (keyPressed === RIGHT_KEY && !goingLeft) {
     velocity_x = 10;
     velocity_y = 0;
   }
-  if (keyPressed === DOWN_KEY && !goingDown) {
+}
+
+up.addEventListener("click",function(){
+  const goingDown = velocity_y === 10;
+
+  if (!goingDown) {
+    velocity_x = 0;
+    velocity_y = -10;
+  }
+});
+
+down.addEventListener("click", function(){
+  const goingUp = velocity_y === -10;
+
+  if (!goingUp) {
     velocity_x = 0;
     velocity_y= 10;
   }
-}
+});
+
+left.addEventListener("click", function(){
+  const goingRight = velocity_x === 10;
+
+  if (!goingRight) {
+    velocity_x = -10;
+    velocity_y = 0;
+  }
+});
+
+right.addEventListener("click", function() {
+  const goingLeft = velocity_x === -10;
+
+  if (!goingLeft) {
+    velocity_x = 10;
+    velocity_y = 0;
+  }
+});

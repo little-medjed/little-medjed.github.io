@@ -9,6 +9,8 @@ const down = document.querySelector("#down");
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
 const a_button = document.querySelector("#A");
+const eat_sound = document.getElementById('eat');
+const hit_sound = document.getElementById('hit');
 
 const GAME_SPEED = 100;
 const CANVAS_BORDER_COLOR = '#346856';
@@ -44,6 +46,7 @@ document.addEventListener("keydown", changeDirection);
     //MAIN
 function main() {
     if (didGameEnd()){
+      hit_sound.play();
       return gameOver();
     }
     timeId = setTimeout(onTick, GAME_SPEED);
@@ -139,6 +142,7 @@ function advanceSnake() {
 
   const didEatFood = snake[0].x === food_x && snake[0].y === food_y;
   if (didEatFood) {
+     eat_sound.play();
      score += 10;
      createFood();
   }else {

@@ -5,7 +5,7 @@
          url('webfontkit/pixelemulator-xq08-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: block;
+    font-display:optional;
 }
 
 body{
@@ -35,7 +35,6 @@ a{
   text-align: center;
   padding-top: 2%;
   padding-bottom: 2%;
-  font-display: block;
 }
 
 #gameCanvas{

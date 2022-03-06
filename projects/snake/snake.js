@@ -54,7 +54,7 @@ function clearCanvas(){
   ctx.strokeStyle = CANVAS_BORDER_COLOR;
   ctx.fillRect(0,0,gameCanvas.width,gameCanvas.height);
   ctx.strokeRect(0,0,gameCanvas.width,gameCanvas.height);
-  ctx.font = "15px monospace";
+  ctx.font = "15px pixel";
   ctx.fillStyle = SNAKE_COLOR;
   ctx.fillText("SCORE:" + score, 6,15);
   ctx.moveTo(0,20);
@@ -67,12 +67,12 @@ function titleScreen() {
   ctx.strokeStyle = CANVAS_BORDER_COLOR;
   ctx.fillRect(0,0,gameCanvas.width,gameCanvas.height);
   ctx.strokeRect(0,0,gameCanvas.width,gameCanvas.height);
-  ctx.font = "55px monospace";
+  ctx.font = "55px pixel";
   ctx.fillStyle = SNAKE_COLOR;
-  ctx.fillText("𝕊ℕ𝔸𝕂𝔼", 65,140);
-  ctx.font = "20px monospace";
+  ctx.fillText("SNAKE", 60,140);
+  ctx.font = "20px pixel";
   ctx.fillStyle = SNAKE_COLOR;
-  ctx.fillText("PRESS A TO START", 90,180);
+  ctx.fillText("PRESS A TO START",45,180);
 }
 
 function gameOver() {
@@ -80,10 +80,9 @@ function gameOver() {
   ctx.strokeStyle = CANVAS_BORDER_COLOR;
   ctx.fillRect(0,0,gameCanvas.width,gameCanvas.height);
   ctx.strokeRect(0,0,gameCanvas.width,gameCanvas.height);
-  ctx.font = "40px monospace";
+  ctx.font = "40px pixel";
   ctx.fillStyle = SNAKE_COLOR;
-  ctx.fillText("𝔾𝔸𝕄𝔼 𝕆𝕍𝔼ℝ", 20,165);
-  ctx.font = "20px monospace";
+  ctx.fillText("GAME OVER", 25,165);
 }
 
 function onTick() {

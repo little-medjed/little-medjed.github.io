@@ -8,6 +8,7 @@ const up = document.querySelector("#up");
 const down = document.querySelector("#down");
 const left = document.querySelector("#left");
 const right = document.querySelector("#right");
+const a_button = document.querySelector("#A");
 
 const GAME_SPEED = 100;
 const CANVAS_BORDER_COLOR = '#346856';
@@ -28,31 +29,24 @@ let food_y;
 let velocity_x = 10;
 let velocity_y = 0;
 let changingDirection = false;
+let timeId;
+
 
 //CALL FUNCTIONS
-main();
+titleScreen()
+a_button.addEventListener("click",main);
 createFood();
-document.addEventListener("keydown", changeDirection)
-
+document.addEventListener("keydown", changeDirection);
 
 
 //FUNCTIONS
 
     //MAIN
 function main() {
-
-    if (didGameEnd()) return;
-
-    setTimeout(function onTick() {
-      changingDirection = false;
-      clearCanvas();
-      ctx.fillText("SCORE:" + score,5,16);
-      drawFood();
-      advanceSnake();
-      drawSnake();
-
-      main();
-    }, GAME_SPEED)
+    if (didGameEnd()){
+      return gameOver();
+    }
+    timeId = setTimeout(onTick, GAME_SPEED);
 }
 
 function clearCanvas(){
@@ -62,10 +56,45 @@ function clearCanvas(){
   ctx.strokeRect(0,0,gameCanvas.width,gameCanvas.height);
   ctx.font = "15px monospace";
   ctx.fillStyle = SNAKE_COLOR;
+  ctx.fillText("SCORE:" + score, 6,15);
   ctx.moveTo(0,20);
   ctx.lineTo(320,20);
   ctx.stroke();
 }
+
+function titleScreen() {
+  ctx.fillStyle = CANVAS_BACKGROUND_COLOR;
+  ctx.strokeStyle = CANVAS_BORDER_COLOR;
+  ctx.fillRect(0,0,gameCanvas.width,gameCanvas.height);
+  ctx.strokeRect(0,0,gameCanvas.width,gameCanvas.height);
+  ctx.font = "55px monospace";
+  ctx.fillStyle = SNAKE_COLOR;
+  ctx.fillText("𝕊ℕ𝔸𝕂𝔼", 65,140);
+  ctx.font = "20px monospace";
+  ctx.fillStyle = SNAKE_COLOR;
+  ctx.fillText("PRESS A TO START", 90,180);
+}
+
+function gameOver() {
+  ctx.fillStyle = CANVAS_BACKGROUND_COLOR;
+  ctx.strokeStyle = CANVAS_BORDER_COLOR;
+  ctx.fillRect(0,0,gameCanvas.width,gameCanvas.height);
+  ctx.strokeRect(0,0,gameCanvas.width,gameCanvas.height);
+  ctx.font = "40px monospace";
+  ctx.fillStyle = SNAKE_COLOR;
+  ctx.fillText("𝔾𝔸𝕄𝔼 𝕆𝕍𝔼ℝ", 20,165);
+  ctx.font = "20px monospace";
+}
+
+function onTick() {
+  changingDirection = false;
+  clearCanvas();
+  drawFood();
+  advanceSnake();
+  drawSnake();
+
+  main();
+  }
 
 function didGameEnd() {
   for (let i = 4; i < snake.length; i++) {
@@ -170,6 +199,9 @@ function changeDirection(event) {
 }
 
 up.addEventListener("click",function(){
+  if (changingDirection) return;
+  changingDirection = true;
+
   const goingDown = velocity_y === 10;
 
   if (!goingDown) {
@@ -179,6 +211,9 @@ up.addEventListener("click",function(){
 });
 
 down.addEventListener("click", function(){
+  if (changingDirection) return;
+  changingDirection = true;
+
   const goingUp = velocity_y === -10;
 
   if (!goingUp) {
@@ -188,6 +223,9 @@ down.addEventListener("click", function(){
 });
 
 left.addEventListener("click", function(){
+  if (changingDirection) return;
+  changingDirection = true;
+
   const goingRight = velocity_x === 10;
 
   if (!goingRight) {
@@ -197,6 +235,9 @@ left.addEventListener("click", function(){
 });
 
 right.addEventListener("click", function() {
+  if (changingDirection) return;
+  changingDirection = true;
+
   const goingLeft = velocity_x === -10;
 
   if (!goingLeft) {

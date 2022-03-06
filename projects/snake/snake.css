@@ -1,3 +1,13 @@
+/*GAME FONT */
+@font-face {
+    font-family: 'pixel';
+    src: url('webfontkit/pixelemulator-xq08-webfont.woff2') format('woff2'),
+         url('webfontkit/pixelemulator-xq08-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body{
   background-color: #dad6d7;
   font-family: monospace;
@@ -193,14 +203,4 @@ h1{
     height: 2rem;
     width: 2rem;
   }
-}
-
-/*GAME FONT */
-@font-face {
-    font-family: 'pixel';
-    src: url('webfontkit/pixelemulator-xq08-webfont.woff2') format('woff2'),
-         url('webfontkit/pixelemulator-xq08-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
 }

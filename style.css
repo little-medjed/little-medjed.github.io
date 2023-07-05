@@ -18,8 +18,8 @@ header > nav{
   text-align: center;
   border-radius: 16px;
   margin-top: 3%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 header > nav > a{
@@ -42,8 +42,8 @@ article{
   background-color: white;
   border-radius: 16px;
   text-align: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
   padding-top: 2%;
   padding-bottom: 2%;
 }
@@ -68,11 +68,15 @@ footer{
   text-align: center;
   border-radius: 16px;
   margin-bottom: 3%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+ul{
+  text-align: left;
+  list-style: none;
 }
 
 li{
-  list-style: none;
-  line-height: 25px;
+  margin: 1em;
 }
